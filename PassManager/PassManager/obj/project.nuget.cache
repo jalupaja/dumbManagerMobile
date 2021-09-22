@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "PqYNDkUB6KrboBa1Fef/ErLiL55xgxZ5cY+hdT0dw5fk1jQXew0qt9oLUDsp1XKq6Ii/nAs8qzVYPtEwAt5PjQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\PassManagerEdit\\PassManager\\PassManager\\PassManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jalupa\\.nuget\\packages\\dropbox.api\\6.14.0\\dropbox.api.6.14.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\sqlite-net-sqlcipher\\1.8.116\\sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlcipher\\2.0.4\\sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\sqlitepclraw.lib.e_sqlcipher\\2.0.4\\sqlitepclraw.lib.e_sqlcipher.2.0.4.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\sqlitepclraw.provider.e_sqlcipher\\2.0.4\\sqlitepclraw.provider.e_sqlcipher.2.0.4.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\twostepsauthenticator\\1.4.1\\twostepsauthenticator.1.4.1.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,52 @@
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.deps.json
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Debug\netstandard2.0\ref\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.pdb
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csprojAssemblyReference.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfo.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\ref\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.pdb
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfo.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csprojAssemblyReference.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.deps.json
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\Debug\netstandard2.0\ref\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.pdb
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\ref\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.deps.json
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Debug\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Debug\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csproj.AssemblyReference.cache
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\App.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.AssemblyInfo.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\XamlC.stamp
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.pdb

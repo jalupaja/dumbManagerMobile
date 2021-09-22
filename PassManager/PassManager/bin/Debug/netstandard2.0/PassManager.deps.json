@@ -1,0 +1,288 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "PassManager/1.0.0": {
+        "dependencies": {
+          "Dropbox.Api": "6.14.0",
+          "NETStandard.Library": "2.0.3",
+          "TwoStepsAuthenticator": "1.4.1",
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Forms": "5.0.0.2125",
+          "sqlite-net-sqlcipher": "1.8.116"
+        },
+        "runtime": {
+          "PassManager.dll": {}
+        }
+      },
+      "Dropbox.Api/6.14.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dropbox.Api.dll": {
+            "assemblyVersion": "6.14.0.0",
+            "fileVersion": "6.14.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "sqlite-net-sqlcipher/1.8.116": {
+        "dependencies": {
+          "SQLitePCLRaw.bundle_e_sqlcipher": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "assemblyVersion": "1.8.116.0",
+            "fileVersion": "1.8.116.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.lib.e_sqlcipher": "2.0.4",
+          "SQLitePCLRaw.provider.e_sqlcipher": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.0.4": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlcipher/2.0.4": {},
+      "SQLitePCLRaw.provider.e_sqlcipher/2.0.4": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlcipher.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {
+            "assemblyVersion": "4.0.1.1",
+            "fileVersion": "4.6.27617.2"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "TwoStepsAuthenticator/1.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/TwoStepsAuthenticator.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.7.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/5.0.0.2125": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.747"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.747"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.747"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PassManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dropbox.Api/6.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O/jK5yhv8oMeFaujgiJr3TsSDWCgSUr/IvyDmgIZbaQIkeziavif2b/PLxULhEFRK1F8wssAmohSWI22A8n0gw==",
+      "path": "dropbox.api/6.14.0",
+      "hashPath": "dropbox.api.6.14.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "sqlite-net-sqlcipher/1.8.116": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-szETpAzrVFkVzN9jS4Zsuo+Ffe2OyKTgyy9NtT1plNZctqzHtLFztlbpiV5XVMJrxNeZp3q+04mYfPEt6n7L8Q==",
+      "path": "sqlite-net-sqlcipher/1.8.116",
+      "hashPath": "sqlite-net-sqlcipher.1.8.116.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_e_sqlcipher/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OHRrxNqstRzb7iDOx8EoiIleij9GrW7/6ZoLoA1XzXzLVaaNc6iHS5SkLUXIvuYeGuP51/RGysE5lYPpkjFdXA==",
+      "path": "sqlitepclraw.bundle_e_sqlcipher/2.0.4",
+      "hashPath": "sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4XlDZpDAsboMD6qZQcz9AaKblKDUTVHF+8f3lvbP7QjoqSRr2Xc0Lm34IK2pjRIYnyFLhI3yOJ5YWfOiCid2yg==",
+      "path": "sqlitepclraw.core/2.0.4",
+      "hashPath": "sqlitepclraw.core.2.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlcipher/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fViXtvmIEElbzBWHKOoCLq5rYxUIN63sA6ueYKoJ/GLaqmeNEWLNNisdLf1UkcCG7rW6muMZLKaHslE4Clpy2w==",
+      "path": "sqlitepclraw.lib.e_sqlcipher/2.0.4",
+      "hashPath": "sqlitepclraw.lib.e_sqlcipher.2.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.e_sqlcipher/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eYceLVdrOQEsAVbjx4NJD1V1BumAWlSQlqqbX0qqBbQW62MTGixEu3Si+pAOJjurpsagK+pBc/kuBMnFv0XL4g==",
+      "path": "sqlitepclraw.provider.e_sqlcipher/2.0.4",
+      "hashPath": "sqlitepclraw.provider.e_sqlcipher.2.0.4.nupkg.sha512"
+    },
+    "System.Buffers/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "path": "system.buffers/4.4.0",
+      "hashPath": "system.buffers.4.4.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "TwoStepsAuthenticator/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bkDEFWLibbJ5b0b7zgr3Uc1brYa5hFunZ36WmG+yvfwMCgu978NqEPVu1P120Qbrt65TYEcimsxTzICe6XfAig==",
+      "path": "twostepsauthenticator/1.4.1",
+      "hashPath": "twostepsauthenticator.1.4.1.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
+      "path": "xamarin.essentials/1.7.0",
+      "hashPath": "xamarin.essentials.1.7.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2125": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oP4eEx8SkEId/azXqzBpl9MA5kjn8izMoQImV3c/M4Q8NLSERWWNJkymrSylaIIO4l0zQIofYjwQoHmtaQ0dFQ==",
+      "path": "xamarin.forms/5.0.0.2125",
+      "hashPath": "xamarin.forms.5.0.0.2125.nupkg.sha512"
+    }
+  }
+}

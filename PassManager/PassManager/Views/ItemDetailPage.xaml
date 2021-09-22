@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PassManager.Views.ItemDetailPage"
+    BackgroundColor="Black"
+    Title="{Binding Name}">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem 
+            x:Name="ChangeBtn" 
+            Text="Edit" 
+            Clicked="ToolbarItem_Clicked_1"/>
+        
+        <ToolbarItem 
+            Text="Del" 
+            Clicked="ToolbarItem_Clicked"/>
+        
+    </ContentPage.ToolbarItems>
+    
+    
+    
+    <StackLayout>
+
+        <ScrollView>
+
+            <StackLayout 
+            Spacing="10" 
+            Padding="10">
+
+             
+
+                <Frame
+                    Padding="12"
+                    BackgroundColor="#121212">
+                    
+
+                    <StackLayout>
+                        <Label Text="Name:" TextColor="White" FontSize="Small"/>
+                        <Label x:Name="lName" Text="{Binding Name}" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                        <Editor x:Name="NameEditor" AutoSize="TextChanges" Text="{Binding Name}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Padding="12"
+                    BackgroundColor="#121212">
+
+                    <StackLayout Orientation="Vertical">
+
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Username:" TextColor="White" FontSize="Small" />
+                            <Label x:Name="lUsername" Text="{Binding Username}" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                            <Editor x:Name="UsernameEditor" AutoSize="TextChanges" Text="{Binding Username}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
+                        </StackLayout>
+
+                        <Button
+                        x:Name="UsernameCopy"
+                        Clicked="UsernameCopy_Clicked"
+                        HeightRequest="30" 
+                        WidthRequest="60" 
+                        HorizontalOptions="End"
+                        Text="Copy"
+                        FontSize="8"/>
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Padding="12"
+                    BackgroundColor="#121212">
+
+                    <StackLayout Orientation="Vertical">
+
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Password:"  TextColor="White" FontSize="Small" />
+                            <Label x:Name="lPassword" Text="{Binding Password}"  TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                            <Editor x:Name="PasswordEditor" AutoSize="TextChanges" Text="{Binding Password}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
+                        </StackLayout>
+
+                        <Button
+                        x:Name="PasswordCopy"
+                        Clicked="PasswordCopy_Clicked"
+                        HeightRequest="30" 
+                        WidthRequest="60" 
+                        HorizontalOptions="End"
+                        Text="Copy"
+                        FontSize="8"/>
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    x:Name="LinkFrame"
+                    Padding="12"
+                    BackgroundColor="#121212">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Url:" TextColor="White" FontSize="Small" />
+                        <Label Text="{Binding Url}"  x:Name="lUrl" TextColor="Blue" Margin="0,0,0,0">
+                            <Label.GestureRecognizers>
+
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Editor x:Name="UrlEditor" Text="{Binding Url}" TextColor="White" AutoSize="TextChanges" IsVisible="false" TextChanged="Editors_TextChanged" />
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Padding="12"
+                    BackgroundColor="#121212">
+
+                    <StackLayout Orientation="Vertical">
+
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="2FA Code:" TextColor="White" FontSize="Small" />
+                            <Label x:Name="lTwoFA" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                            <Editor x:Name="TwoFAEditor" AutoSize="TextChanges" Text="{Binding TwoFA}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
+                        </StackLayout>
+
+                        <Button
+                        x:Name="TwoFACopy"
+                        Clicked="TwoFACopy_Clicked"
+                        HeightRequest="30" 
+                        WidthRequest="60" 
+                        HorizontalOptions="End"
+                        Text="Copy"
+                        FontSize="8"/>
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Padding="12"
+                    BackgroundColor="#121212">
+
+                    <StackLayout>
+                        <Label Text="Notes:" TextColor="White" FontSize="Small" />
+                        <Label x:Name="lNote" Text="{Binding Note}" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                        <Editor x:Name="NoteEditor" AutoSize="TextChanges" Text="{Binding Note}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged" />
+                    </StackLayout>
+
+                </Frame>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <StackLayout
+            x:Name="BtnLayout"
+            HeightRequest="34" 
+            HorizontalOptions="Center"
+            Margin="0,2,0,10"
+            Orientation="Horizontal"
+            IsVisible="false">
+
+            <Button
+                    x:Name="CancelBtn"
+                    Clicked="CancelBtn_Clicked"
+                    Text="Cancel" 
+                    FontSize="12" 
+                    WidthRequest="90" 
+                    Margin="0,0,40,0"
+                    />
+
+            <Button
+                    x:Name="SaveBtn"
+                    Clicked="SaveBtn_Clicked"
+                    Text="Save" 
+                    FontSize="12" 
+                    WidthRequest="90" 
+                    Margin="40,0,0,0"
+                    IsEnabled="False"
+                    />
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

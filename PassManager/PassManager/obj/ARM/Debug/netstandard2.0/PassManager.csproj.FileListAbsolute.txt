@@ -1,0 +1,17 @@
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\ARM\Debug\netstandard2.0\PassManager.deps.json
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\ARM\Debug\netstandard2.0\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\ARM\Debug\netstandard2.0\ref\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\bin\ARM\Debug\netstandard2.0\PassManager.pdb
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.csprojAssemblyReference.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.AssemblyInfo.cs
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\XamlC.stamp
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\ref\PassManager.dll
+C:\Users\abdus\Desktop\PassManager\PassManager\obj\ARM\Debug\netstandard2.0\PassManager.pdb

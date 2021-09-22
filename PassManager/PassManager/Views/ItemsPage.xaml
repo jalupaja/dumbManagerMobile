@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PassManager.Views.ItemsPage"
+    xmlns:local="clr-namespace:PassManager.ViewModels"  
+    xmlns:model="clr-namespace:PassManager.Models"  
+    BackgroundColor="Black"
+    x:Name="BrowseItemsPage">
+
+    <Shell.TitleView>
+
+        <StackLayout Orientation="Horizontal">
+
+            <StackLayout 
+                VerticalOptions="Center"
+                Orientation="Vertical">
+
+                <Frame
+                    HeightRequest="32"
+                    CornerRadius="13"
+                    BorderColor="#99000000"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    IsClippedToBounds="True"
+                    Background="#aaffffff"
+                    Padding="0">
+
+                    <Grid HorizontalOptions="FillAndExpand">
+
+                        <SearchBar
+                            x:Name="MySBar"
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            PlaceholderColor="#66000000"
+                            TextChanged="SearchBar_TextChanged"
+                            Placeholder="search"
+                            FontSize="14"
+                            />
+
+                    </Grid>
+
+                </Frame>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem 
+            Text="Add" 
+            Command="{Binding AddItemCommand}"/>
+        
+    </ContentPage.ToolbarItems>
+
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    
+    <StackLayout >
+
+        <AbsoluteLayout 
+            HeightRequest="10000000" 
+            VerticalOptions="Fill" 
+            x:Name="emptyLabel" 
+            IsVisible="false">
+
+            <StackLayout
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="0.5,0.5"
+                >
+
+                <Label 
+                 
+                Text="No items found"
+                TextColor="White"
+                HorizontalOptions="Center"
+                FontSize="20"
+                />
+
+
+            </StackLayout>
+            
+        </AbsoluteLayout>
+
+        <RefreshView 
+            x:DataType="local:ItemsViewModel" 
+            Command="{Binding LoadItemsCommand}" 
+            IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+            >
+
+            <CollectionView 
+                x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None"
+                >
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <StackLayout
+                            Padding="14,9,14,5" 
+                            x:DataType="model:Item" 
+                            Orientation="Vertical" >
+
+                            <Frame
+                                CornerRadius="8"
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="#332196F3"
+                                >
+
+                                <StackLayout 
+                                Orientation="Vertical">
+
+                                    <Grid x:Name="controlGrid" RowSpacing="5" ColumnSpacing="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <!-- !!! -->
+                                        <Label
+                                        Grid.Row="0"
+                                        Text="{Binding Id}"
+                                        LineBreakMode="NoWrap"
+                                        TextColor="{StaticResource Primary}"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="16" />
+
+                                        <Label
+                                        Grid.Row="0" Grid.Column="1"
+                                        Text="{Binding Name}" 
+                                        LineBreakMode="NoWrap"
+                                        TextColor="{StaticResource Primary}"
+                                        MaxLines="1"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="16" />
+
+                                    </Grid>
+
+                                    <Grid x:Name="controlGrid2" RowSpacing="5" ColumnSpacing="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label
+                                        Grid.Row="0" 
+                                        Text="      "
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="13" />
+
+                                        <Label
+                                        Grid.Row="0" Grid.Column="1"
+                                        Text="{Binding Username}" 
+                                        TextColor="White"
+                                        LineBreakMode="NoWrap"
+                                        MaxLines="1"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="13" />
+
+                                    </Grid>
+
+                                    <StackLayout.GestureRecognizers>
+
+                                        <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                        CommandParameter="{Binding .}">
+
+                                        </TapGestureRecognizer>
+
+                                    </StackLayout.GestureRecognizers>
+
+                                </StackLayout>
+
+                            </Frame>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </RefreshView>
+
+    </StackLayout>
+
+</ContentPage>

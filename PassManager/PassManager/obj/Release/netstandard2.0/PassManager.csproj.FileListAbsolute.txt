@@ -1,0 +1,17 @@
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.deps.json
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Release\netstandard2.0\ref\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.pdb
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.csprojAssemblyReference.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\App.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\AppShell.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfo.cs
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\XamlC.stamp
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\ref\PassManager.dll
+D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.pdb

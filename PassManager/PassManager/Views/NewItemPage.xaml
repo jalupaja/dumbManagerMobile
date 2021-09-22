@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassManager.Views.NewItemPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Item"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+        <StackLayout >
+
+            <ScrollView>
+
+                <StackLayout Spacing="3" Padding="15">
+
+                    <Label Text="Name" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding Name, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+
+                    <Label Text="Username" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding Username, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+
+                    <Label Text="Password" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding Password, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+
+                    <Label Text="Url" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding Url, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+
+                    <Label Text="2FA Secret" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding TwoFA, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+
+                    <Label Text="Note" TextColor="White" FontSize="Medium" />
+                    <Editor Text="{Binding Note, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium"/>
+
+                        <StackLayout Orientation="Horizontal">
+                        <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                        <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                </StackLayout>
+                
+            </ScrollView>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
