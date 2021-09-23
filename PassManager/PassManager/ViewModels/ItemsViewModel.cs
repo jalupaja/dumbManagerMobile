@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace PassManager.ViewModels
 {
@@ -98,10 +99,10 @@ namespace PassManager.ViewModels
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
 
-        private void Sync()
+        private async void Sync()
         {
             int failCount = 0;
-            parent.setSyncResponse(string.Empty);
+            //parent.setSyncResponse(string.Empty);
             #region first DropNet
             bool pass = true;
             try
@@ -115,7 +116,7 @@ namespace PassManager.ViewModels
             if (pass)
             {
                 //check internet Connection
-                parent.addSyncResponse("Checking Internet Connection");
+                //parent.addSyncResponse("Checking Internet Connection");
                 try
                 {
                     using (var client = new System.Net.WebClient())
@@ -123,8 +124,8 @@ namespace PassManager.ViewModels
                 }
                 catch
                 {
-                    parent.setSyncResponse("ERROR:" + Environment.NewLine + "You are not connected to the Internet");
-                    parent.finishedSyncing();
+                    //parent.setSyncResponse("ERROR:" + Environment.NewLine + "You are not connected to the Internet");
+                    //parent.finishedSyncing();
                     return;
                 }
                 try
@@ -133,8 +134,8 @@ namespace PassManager.ViewModels
                 }
                 catch (Exception)
                 {
-                    parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem logging into Dropbox!" + Environment.NewLine + "If this keeps happening, please delete the notes of Dropbox(Sync)!");
-                    parent.finishedSyncing();
+                    //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem logging into Dropbox!" + Environment.NewLine + "If this keeps happening, please delete the notes of Dropbox(Sync)!");
+                    //parent.finishedSyncing();
                     return;
                 }
 
@@ -143,7 +144,7 @@ namespace PassManager.ViewModels
                 string tmpFolder = Path.Combine(Constants.basePath, "dumbManagerSync");
                 try { Directory.CreateDirectory(tmpFolder); } catch (Exception) { }
 
-                parent.addSyncResponse("Checking if file exists");
+                //parent.addSyncResponse("Checking if file exists");
                 try
                 {
                     //Download file into temp Folder
@@ -156,7 +157,7 @@ namespace PassManager.ViewModels
                 }
                 catch (Exception)
                 {
-                    parent.addSyncResponse("Uploading local file");
+                    //parent.addSyncResponse("Uploading local file");
                     try
                     {
                         using (var upl = new FileStream(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".db", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -167,15 +168,15 @@ namespace PassManager.ViewModels
                     }
                     catch (Exception)
                     {
-                        parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem uploading your file!");
-                        parent.finishedSyncing();
+                        //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem uploading your file!");
+                        //parent.finishedSyncing();
                         return;
                     }
 
-                    parent.addSyncResponse($"Deleting {Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)))}");
+                    //parent.addSyncResponse($"Deleting {Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)))}");
                     File.Delete(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)));
-                    parent.setSyncResponse("SUCCESS:" + Environment.NewLine + "Uploaded local file.");
-                    parent.finishedSyncing();
+                    //parent.setSyncResponse("SUCCESS:" + Environment.NewLine + "Uploaded local file.");
+                    //parent.finishedSyncing();
                     return;
                 }
 
@@ -196,7 +197,7 @@ namespace PassManager.ViewModels
                     catch (Exception)
                     {
                         Cleanup(tmpFolder);
-                        parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been problem downloading the files!");
+                        //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been problem downloading the files!");
                         parent.finishedSyncing();
                         return;
                     }
@@ -207,7 +208,7 @@ namespace PassManager.ViewModels
                 //Read local update file and update the downloaded File
                 if (File.Exists(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name))))
                 {
-                    parent.addSyncResponse("Updating Password Manager");
+                    //parent.addSyncResponse("Updating Password Manager");
                     try
                     {
                         con = new SQLiteConnection(new SQLiteConnectionString(Path.Combine(tmpFolder, Constants.HashIt(Constants.name) + ".db"), Constants.Flags, true, key: Constants.pw));
@@ -215,9 +216,9 @@ namespace PassManager.ViewModels
                     }
                     catch (Exception)
                     {
-                        parent.setSyncResponse("ERROR: Your local and online password dont seem to match!");
+                        //parent.setSyncResponse("ERROR: Your local and online password dont seem to match!");
                         Cleanup(tmpFolder);
-                        parent.finishedSyncing();
+                        //parent.finishedSyncing();
                         return;
                     }
                     con.BeginTransaction();
@@ -257,14 +258,14 @@ namespace PassManager.ViewModels
                                                     n.Url = linePart[4];
                                                     n.TwoFA = linePart[5];
                                                     n.Note = linePart[6];
-                                                    parent.addSyncResponse($"Adding {linePart[1]}");
+                                                    //parent.addSyncResponse($"Adding {linePart[1]}");
                                                     try
                                                     {
                                                         con.Insert(n);
                                                     }
                                                     catch (Exception)
                                                     {
-                                                        parent.addSyncResponse("ERROR:" + Environment.NewLine + $"{linePart[1]} could not be added");
+                                                        //parent.addSyncResponse("ERROR:" + Environment.NewLine + $"{linePart[1]} could not be added");
                                                         failCount++;
                                                     }
                                                     n = null;
@@ -278,14 +279,14 @@ namespace PassManager.ViewModels
                                                     n.Url = linePart[5];
                                                     n.TwoFA = linePart[6];
                                                     n.Note = linePart[7];
-                                                    parent.addSyncResponse($"Updating {linePart[2]}");
+                                                    //parent.addSyncResponse($"Updating {linePart[2]}");
                                                     try
                                                     {
                                                         con.Update(n);
                                                     }
                                                     catch (Exception)
                                                     {
-                                                        parent.addSyncResponse($"ERROR: {linePart[2]} could not be updated");
+                                                        //parent.addSyncResponse($"ERROR: {linePart[2]} could not be updated");
                                                         failCount++;
                                                     }
                                                     n = null;
@@ -296,20 +297,20 @@ namespace PassManager.ViewModels
                                                     n.Name = linePart[2];
                                                     n.Username = linePart[3];
                                                     n.Url = linePart[4];
-                                                    parent.addSyncResponse($"Deleting {linePart[2]}");
+                                                    //parent.addSyncResponse($"Deleting {linePart[2]}");
                                                     try
                                                     {
                                                         con.Delete(n);
                                                     }
                                                     catch (Exception)
                                                     {
-                                                        parent.addSyncResponse($"ERROR: {linePart[2]} could not be Deleted");
+                                                        //parent.addSyncResponse($"ERROR: {linePart[2]} could not be Deleted");
                                                         failCount++;
                                                     }
                                                     n = null;
                                                     break;
                                                 default:
-                                                    parent.addSyncResponse($"ERROR: Could not Resolve Command");
+                                                    //parent.addSyncResponse($"ERROR: Could not Resolve Command");
                                                     failCount++;
                                                     break;
                                             }
@@ -326,20 +327,19 @@ namespace PassManager.ViewModels
                     {
                         con.Close();
                         Cleanup(tmpFolder);
-                        parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been an unknown error while updating local file!");
-                        parent.finishedSyncing();
+                        //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been an unknown error while updating local file!");
+                        //parent.finishedSyncing();
                         return;
                     }
                     if (failCount > 0)
                     {
-                        parent.addSyncResponse("Error:" + Environment.NewLine + $"There have been {failCount} Errors while Syncing!");
-                        new FrmLittleBox($"There have been {failCount} Errors while Syncing!", parent.getSyncResponse()).Show();
-                        if (MessageBox.Show($"There have been {failCount} Errors while Syncing!" + Environment.NewLine + "Are you sure that you want to continue?", $"Encountered {failCount} Errors", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                        //parent.addSyncResponse("Error:" + Environment.NewLine + $"There have been {failCount} Errors while Syncing!");
+                        if (!await App.Current.MainPage.DisplayAlert($"There have been {failCount} Errors while Syncing!", "Are you sure that you want to continue?", "Yes", "No"))
                         {
                             Cleanup(tmpFolder);
-                            parent.SafeSyncFile(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".log");
-                            parent.setSyncResponse("You can find the log file at" + Environment.NewLine + Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".log");
-                            parent.finishedSyncing();
+                            //parent.SafeSyncFile(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".log");
+                            //parent.setSyncResponse("You can find the log file at" + Environment.NewLine + Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".log");
+                            //parent.finishedSyncing();
                             return;
                         }
                     }
@@ -353,9 +353,9 @@ namespace PassManager.ViewModels
                 }
                 catch (Exception)
                 {
-                    parent.setSyncResponse($"ERROR: Failed to delete online file");
+                    //parent.setSyncResponse($"ERROR: Failed to delete online file");
                     Cleanup(tmpFolder);
-                    parent.finishedSyncing();
+                    //parent.finishedSyncing();
                     return;
                 }
 
@@ -370,9 +370,9 @@ namespace PassManager.ViewModels
                 }
                 catch (Exception e)
                 {
-                    parent.setSyncResponse("Error:" + Environment.NewLine + "There has been a problem updating the online file!" + e.Message);//!!!
+                    //parent.setSyncResponse("Error:" + Environment.NewLine + "There has been a problem updating the online file!" + e.Message);//!!!
                     Cleanup(tmpFolder);
-                    parent.finishedSyncing();
+                    //parent.finishedSyncing();
                     return;
                 }
 
@@ -382,7 +382,7 @@ namespace PassManager.ViewModels
 
                 foreach (string file in files)
                 {
-                    parent.addSyncResponse($"Moving {Path.GetFileName(file)} to local Folder");
+                    //parent.addSyncResponse($"Moving {Path.GetFileName(file)} to local Folder");
                     if (Path.Combine(localFolder, Path.GetFileName(file)) == Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)) + ".db") //!!!
                     {
                         try
@@ -391,9 +391,9 @@ namespace PassManager.ViewModels
                         }
                         catch (Exception)
                         {
-                            parent.setSyncResponse("Error:" + Environment.NewLine + "There has been a problem copying the new updated file!");
+                            //parent.setSyncResponse("Error:" + Environment.NewLine + "There has been a problem copying the new updated file!");
                             Cleanup(tmpFolder);
-                            parent.finishedSyncing();
+                            //parent.finishedSyncing();
                             return;
                         }
                     }
@@ -404,35 +404,52 @@ namespace PassManager.ViewModels
                 Cleanup(tmpFolder);
                 try
                 {
-                    parent.addSyncResponse($"Deleting {Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)))}");
+                    //parent.addSyncResponse($"Deleting {Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)))}");
                     File.Delete(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name)));
                 }
                 catch (Exception)
                 {
-                    parent.addSyncResponse($"ERROR: Failed to delete " + Environment.NewLine + Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name))));
+                    //parent.addSyncResponse($"ERROR: Failed to delete " + Environment.NewLine + Path.GetFileName(Path.Combine(Constants.basePath, Constants.HashIt(Constants.name))));
                 }
 
-                parent.setSyncResponse("SUCCESS:" + Environment.NewLine + "" + Environment.NewLine + "You have to restart in Order for the changes to take affect!");
+                //parent.setSyncResponse("SUCCESS:" + Environment.NewLine + "" + Environment.NewLine + "You have to restart in Order for the changes to take affect!");
 
                 //!!! restart
                 //!!! Process.Start(Application.ExecutablePath);
                 //!!! parent.TrayExit(null, null);
-                parent.finishedSyncing();
+                //parent.finishedSyncing();
                 return;
             }
             else
             {
-                parent.setSyncResponse("You have to create an Account on dropbox.com authorize the App!");
+                //parent.setSyncResponse("You have to create an Account on dropbox.com authorize the App!");
                 Uri Url = DropboxOAuth2Helper.GetAuthorizeUri(APIKEY);
-                var tmp = new FrmLittleBox("Please open this Link in your browser and paste the Access Code below!", Url.AbsoluteUri, "Paste Access Code here");
-                tmp.ShowDialog();
-                if (tmp.ret == "" || tmp.DialogResult != DialogResult.OK)
+                string tmp = await App.Current.MainPage.DisplayPromptAsync("Please open this Link in your browser and paste the Access Code below!", Url.AbsoluteUri, placeholder:"Paste Access Code Here");
+                //new FrmLittleBox("Please open this Link in your browser and paste the Access Code below!", Url.AbsoluteUri, "Paste Access Code here");
+                if (tmp == null || tmp == "")
                 {
-                    parent.setSyncResponse("ERROR:" + Environment.NewLine + "You have to enter an Access Code!");
-                    parent.finishedSyncing();
+                    //parent.setSyncResponse("ERROR:" + Environment.NewLine + "You have to enter an Access Code!");
+                    //parent.finishedSyncing();
                     return;
                 }
-                parent.CreateDropStuff(tmp.ret);
+                Item newItem = new Item()
+                {
+                    Name = "Dropbox(Sync)",
+                    Username = "",
+                    Password = "",
+                    Url = "https://www.dropbox.com",
+                    TwoFA = "",
+                    Note = tmp
+                };
+                Constants.con().Insert(newItem);
+
+                var result = Constants.con().Table<Item>().ToList();
+                foreach (var item in result)
+                {
+                    newItem.Id = item.Id;
+                }
+
+                await DataStore.AddItemAsync(newItem);
 
                 Sync();
                 /* //!!!
@@ -450,7 +467,7 @@ namespace PassManager.ViewModels
                 catch (Exception)
                 {
                     _client.Dispose();
-                    parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem uploading your file!");
+                    //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been a problem uploading your file!");
                     parent.finishedSyncing();
                     return;
                 }
@@ -467,20 +484,20 @@ namespace PassManager.ViewModels
         private void Cleanup(string folderpath)
         {
             string[] files = Directory.GetFiles(folderpath);
-            parent.addSyncResponse("Cleaning temporary files:");
+            //parent.addSyncResponse("Cleaning temporary files:");
             foreach (string file in files)
             {
                 try
                 {
                     if (Path.GetFileName(file) != Constants.HashIt(Constants.name))
                     {
-                        parent.addSyncResponse($"Deleting {Path.GetFileName(file)}");
+                        //parent.addSyncResponse($"Deleting {Path.GetFileName(file)}");
                         File.Delete(file);
                     }
                 }
                 catch (Exception)
                 {
-                    parent.addSyncResponse("ERROR: Failed to delete" + Environment.NewLine + Path.GetFileName(file));
+                    //parent.addSyncResponse("ERROR: Failed to delete" + Environment.NewLine + Path.GetFileName(file));
                 }
             }
         }

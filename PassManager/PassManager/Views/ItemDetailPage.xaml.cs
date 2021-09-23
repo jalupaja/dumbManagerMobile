@@ -198,7 +198,10 @@ namespace PassManager.Views
         }
         private string Get2FACode()
         {
-            return new TimeAuthenticator().GetCode(_viewModel.TwoFA); //https://github.com/glacasa/TwoStepsAuthenticator
+            var ret = "";
+
+            try { ret = new TimeAuthenticator().GetCode(_viewModel.TwoFA); } catch (Exception) { }//https://github.com/glacasa/TwoStepsAuthenticator
+            return ret;
         }
     }
 }

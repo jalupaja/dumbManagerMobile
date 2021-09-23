@@ -24,9 +24,31 @@ namespace Password_Manager
             SQLite.SQLiteOpenFlags.SharedCache |
             SQLite.SQLiteOpenFlags.FullMutex;
 
-        public static string pw = "abc";//!!!
-        public static string name = "abc";//!!!
+        public static string pw = "";
+        public static string name = "";
 
+        public static bool TryLogin(string name, string pw)
+        {
+            bool works = true;
+            SQLiteConnection nc = null;
+            try
+            {
+                nc = new SQLiteConnection(new SQLiteConnectionString(Path.Combine(basePath, HashIt(name) + ".db"), Flags, true, key: pw));
+                nc.CreateTable<Item>();
+            }
+            catch (Exception)
+            {
+                works = false;
+            }
+            if (works)
+            {
+                c = nc;
+                Constants.pw = pw;
+                Constants.name = name;
+            }
+            return works;
+        }
+        /*
         private static SQLiteConnection nCon(string nName = "", string nPw = "")//!!!
         {
             if (nName == "" && nPw == "")
@@ -42,12 +64,12 @@ namespace Password_Manager
             var nc = new SQLiteConnection(new SQLiteConnectionString(Path.Combine(basePath, HashIt(nName)), Flags, true, key: nPw));
             nc.CreateTable<Item>();
             return nc;
-        }
+        }*/
 
         public static SQLiteConnection con()
         {
-            if (c == null)
-                c = nCon();
+            //if (c == null)
+              //  c = nCon();
             return c;
         }
 

@@ -13,6 +13,7 @@
 
         <StackLayout Orientation="Horizontal">
 
+            <Button Text="{StaticResource IconSync}" FontFamily="FAS" Command="{Binding SyncCommand}" HorizontalOptions="Start" FontSize="Small"  WidthRequest="35"/>
             <StackLayout 
                 VerticalOptions="Center"
                 Orientation="Vertical">
@@ -27,8 +28,10 @@
                     Background="#aaffffff"
                     Padding="0">
 
+
                     <Grid HorizontalOptions="FillAndExpand">
 
+                        
                         <SearchBar
                             x:Name="MySBar"
                             VerticalOptions="Center"
@@ -50,13 +53,10 @@
     </Shell.TitleView>
 
     <ContentPage.ToolbarItems>
-        
+
         <ToolbarItem 
             Text="Add" 
             Command="{Binding AddItemCommand}"/>
-        <ToolbarItem
-            Text="Sync"
-            Command="{Binding SyncCommand}"/>
 
     </ContentPage.ToolbarItems>
 
@@ -132,7 +132,6 @@
                                         <!-- !!! -->
                                         <Label
                                         Grid.Row="0"
-                                        Text="{Binding Id}"
                                         LineBreakMode="NoWrap"
                                         TextColor="{StaticResource Primary}"
                                         Style="{DynamicResource ListItemTextStyle}" 
@@ -201,6 +200,7 @@
 
         </RefreshView>
 
+        <Button Text="Logout" Clicked="Button_Clicked"  HorizontalOptions="CenterAndExpand" VerticalOptions="End" />
     </StackLayout>
 
 </ContentPage>

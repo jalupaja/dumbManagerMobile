@@ -27,6 +27,9 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+
+            <x:String x:Key="IconSync">&#xf021;</x:String>
+            
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

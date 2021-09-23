@@ -1,5 +1,6 @@
 ﻿using PassManager.Models;
 using PassManager.ViewModels;
+using Password_Manager;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,6 +36,13 @@ namespace PassManager.Views
             ItemsListView.ItemsSource = searchBar;
         }
 
+        private async void Button_Clicked(object sender, System.EventArgs e)
+        {
+            Constants.pw = "";
+            Constants.name = "";
+            Constants.con().Close();
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        }
     }
 
 }

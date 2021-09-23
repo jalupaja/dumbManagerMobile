@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassManager.Views.LoginPage"
+             xmlns:local="clr-namespace:PassManager.ViewModels"  
+             xmlns:model="clr-namespace:PassManager.Models"  
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label IsTabStop="False" IsEnabled="True" HeightRequest="-1" FontSize="Large" />
+            <Label 
+                x:Name="LblLogin"
+                Text="Please input your name!"
+                VerticalOptions="StartAndExpand" 
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" 
+                IsTabStop="False" 
+                IsEnabled="False" 
+                />
+            <Entry 
+                x:Name="FileName"
+                TextColor="White"
+                BackgroundColor="Gray" 
+                Placeholder="username"
+                VerticalOptions="Center"    
+                TextChanged="FileName_TextChanged" 
+                />
+            <!--    Unfocused="FileName_TextChanged"    -->
+            <Entry 
+                x:Name="FilePass"
+                Placeholder="password"
+                TextColor="White"
+                BackgroundColor="Gray" 
+                IsPassword="True" 
+                VerticalOptions="Center"
+                TextChanged="FilePass_TextChanged"
+                />
+            <Entry 
+                x:Name="PassConfirm"
+                Placeholder="confirm password"
+                TextColor="White"
+                BackgroundColor="Gray" 
+                IsPassword="True" 
+                VerticalOptions="Center"
+                TextChanged="PassConfirm_TextChanged"
+                />
+            <Button
+                x:Name="SelFile"
+                Clicked="SelFile_Clicked"
+                Text="create new user"
+                IsEnabled="True"
+                TextColor="White"
+                BackgroundColor="Gray"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Center"
+                />
+            <Label IsTabStop="False" IsEnabled="True" FontSize="Large" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -50,3 +50,4 @@ c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\n
 c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.dll
 c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\ref\PassManager.dll
 c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
