@@ -24,8 +24,8 @@ namespace Password_Manager
             SQLite.SQLiteOpenFlags.SharedCache |
             SQLite.SQLiteOpenFlags.FullMutex;
 
-        private static string pw = "abc";//!!!
-        private static string name = "abc";//!!!
+        public static string pw = "abc";//!!!
+        public static string name = "abc";//!!!
 
         private static SQLiteConnection nCon(string nName = "", string nPw = "")//!!!
         {

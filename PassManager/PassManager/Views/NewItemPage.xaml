@@ -15,22 +15,22 @@
 
                 <StackLayout Spacing="3" Padding="15">
 
-                    <Label Text="Name" TextColor="White" FontSize="Medium" />
+                    <Label Text="Name" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Name, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
-                    <Label Text="Username" TextColor="White" FontSize="Medium" />
+                    <Label Text="Username" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Username, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
-                    <Label Text="Password" TextColor="White" FontSize="Medium" />
+                    <Label Text="Password" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Password, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
-                    <Label Text="Url" TextColor="White" FontSize="Medium" />
+                    <Label Text="Url" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Url, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
-                    <Label Text="2FA Secret" TextColor="White" FontSize="Medium" />
+                    <Label Text="2FA Secret" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding TwoFA, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
-                    <Label Text="Note" TextColor="White" FontSize="Medium" />
+                    <Label Text="Note" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Note, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium"/>
 
                         <StackLayout Orientation="Horizontal">
