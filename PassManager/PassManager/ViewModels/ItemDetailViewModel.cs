@@ -95,6 +95,7 @@ namespace PassManager.ViewModels
         internal void DeleteItemCommand()
         {
             Constants.con().Delete<Item>(Id);
+            Constants.AddToFile($"DELETE,,,{Id},,,{Name},,,{Username},,,{Url}");
             DataStore.DeleteItemAsync(ItemId);
 
             Shell.Current.GoToAsync("..");
@@ -114,7 +115,7 @@ namespace PassManager.ViewModels
             };
 
             Constants.con().Update(updateItem);
-
+            Constants.AddToFile($"UPDATE,,,{Id},,,{Name},,,{Username},,,{Password},,,{Url},,,{TwoFA},,,{Note}");
             DataStore.UpdateItemAsync(updateItem);
         }
 

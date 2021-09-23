@@ -48,28 +48,9 @@ namespace Password_Manager
             }
             return works;
         }
-        /*
-        private static SQLiteConnection nCon(string nName = "", string nPw = "")//!!!
-        {
-            if (nName == "" && nPw == "")
-            {
-                nName = name;
-                nPw = pw;
-            }
-            else
-            {
-                name = nName;
-                pw = nPw;
-            }
-            var nc = new SQLiteConnection(new SQLiteConnectionString(Path.Combine(basePath, HashIt(nName)), Flags, true, key: nPw));
-            nc.CreateTable<Item>();
-            return nc;
-        }*/
 
         public static SQLiteConnection con()
         {
-            //if (c == null)
-              //  c = nCon();
             return c;
         }
 
@@ -88,5 +69,24 @@ namespace Password_Manager
             return sb.ToString();
         }
 
+        public static void AddToFile(string line)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(line);
+            SymmetricAlgorithm crypt = Aes.Create();
+            HashAlgorithm hash = SHA256.Create();
+            crypt.BlockSize = 128;
+            crypt.Key = hash.ComputeHash(Encoding.UTF8.GetBytes(pw));
+            crypt.IV = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                using (CryptoStream cryptoStream =
+                   new CryptoStream(memoryStream, crypt.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(bytes, 0, bytes.Length);
+                }
+                File.AppendAllText(Path.Combine(basePath, HashIt(name)), Convert.ToBase64String(memoryStream.ToArray()) + Environment.NewLine);
+            }
+        }
     }
 }

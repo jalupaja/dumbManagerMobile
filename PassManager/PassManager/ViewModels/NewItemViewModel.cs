@@ -80,6 +80,8 @@ namespace PassManager.ViewModels
 
         private async void OnSave()
         {
+            if (Name == null)
+                Name = "";
             Item newItem = new Item()
             {
                 Name = Name,
@@ -90,7 +92,7 @@ namespace PassManager.ViewModels
                 Note = Note
             };
             Constants.con().Insert(newItem);
-
+            Constants.AddToFile($"INSERT,,,{Name},,,{Username},,,{Password},,,{Url},,,{TwoFA},,,{Note}");
             var result = Constants.con().Table<Item>().ToList();
             foreach (var item in result)
             {

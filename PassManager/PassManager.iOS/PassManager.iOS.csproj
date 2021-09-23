@@ -11,7 +11,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>PassManager.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>PassManager.iOS</AssemblyName>
+    <AssemblyName>dumbManager</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <ProvisioningType>automatic</ProvisioningType>
@@ -61,6 +61,12 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dumbManager.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -141,5 +147,8 @@
       <Project>{00421C75-71D9-4A18-9C10-46CDF5AF37A8}</Project>
       <Name>PassManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dumbManager.ico" />
   </ItemGroup>
 </Project>

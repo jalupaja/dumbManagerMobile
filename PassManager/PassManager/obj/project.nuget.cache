@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PqYNDkUB6KrboBa1Fef/ErLiL55xgxZ5cY+hdT0dw5fk1jQXew0qt9oLUDsp1XKq6Ii/nAs8qzVYPtEwAt5PjQ==",
+  "dgSpecHash": "hxwd4p+FcvKMDygscIxJH3yfmM2Wzb5SKc/2kMeDYiCcirHhsxeEi7bJ5hDebSzybyReYj+5jq4IXM02n3JkDA==",
   "success": true,
   "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\PassManagerEdit\\PassManager\\PassManager\\PassManager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jalupa\\.nuget\\packages\\dropbox.api\\6.14.0\\dropbox.api.6.14.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\dropbox.api\\6.15.0\\dropbox.api.6.15.0.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",

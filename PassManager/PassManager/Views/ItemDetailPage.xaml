@@ -77,19 +77,29 @@
 
                         <StackLayout Orientation="Vertical">
                             <Label Text="Password:"  TextColor="LightGray" FontSize="Small" />
-                            <Label x:Name="lPassword" Text="{Binding Password}"  TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                            <Entry x:Name="lPassword" IsReadOnly="True" IsPassword="True" Text="{Binding Password}" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
                             <Editor x:Name="PasswordEditor" AutoSize="TextChanges" Text="{Binding Password}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
                         </StackLayout>
 
-                        <Button
-                        x:Name="PasswordCopy"
-                        Clicked="PasswordCopy_Clicked"
-                        HeightRequest="30" 
-                        WidthRequest="60" 
-                        HorizontalOptions="End"
-                        Text="Copy"
-                        FontSize="8"/>
-
+                        <Grid>
+                            <Button
+                            x:Name="PassSee"
+                            Clicked="PassSee_Clicked"
+                            HeightRequest="30" 
+                            WidthRequest="60" 
+                            HorizontalOptions="Start"
+                            Text="See"
+                            FontSize="8"/>
+                            
+                            <Button
+                            x:Name="PasswordCopy"
+                            Clicked="PasswordCopy_Clicked"
+                            HeightRequest="30" 
+                            WidthRequest="60" 
+                            HorizontalOptions="End"
+                            Text="Copy"
+                            FontSize="8"/>
+                        </Grid>
                     </StackLayout>
 
                 </Frame>
@@ -120,20 +130,30 @@
                     <StackLayout Orientation="Vertical">
 
                         <StackLayout Orientation="Vertical">
-                            <Label Text="2FA Code:" TextColor="LightGray" FontSize="Small" />
-                            <Label x:Name="lTwoFA" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
+                            <Label x:Name="Lbl2FA" Text="2FA Code:" TextColor="LightGray" FontSize="Small" />
+                            <Entry x:Name="lTwoFA" IsReadOnly="True" IsPassword="True" TextColor="White" FontSize="18" Margin="0,0,0,0"/>
                             <Editor x:Name="TwoFAEditor" AutoSize="TextChanges" Text="{Binding TwoFA}" TextColor="White" IsVisible="false" TextChanged="Editors_TextChanged"/>
                         </StackLayout>
 
-                        <Button
-                        x:Name="TwoFACopy"
-                        Clicked="TwoFACopy_Clicked"
-                        HeightRequest="30" 
-                        WidthRequest="60" 
-                        HorizontalOptions="End"
-                        Text="Copy"
-                        FontSize="8"/>
+                        <Grid>
+                            <Button
+                            x:Name="TwoFASee"
+                            Clicked="TwoFASee_Clicked"
+                            HeightRequest="30" 
+                            WidthRequest="60" 
+                            HorizontalOptions="Start"
+                            Text="See"
+                            FontSize="8"/>
 
+                            <Button
+                            x:Name="TwoFACopy"
+                            Clicked="TwoFACopy_Clicked"
+                            HeightRequest="30" 
+                            WidthRequest="60" 
+                            HorizontalOptions="End"
+                            Text="Copy"
+                            FontSize="8"/>
+                        </Grid>
                     </StackLayout>
 
                 </Frame>

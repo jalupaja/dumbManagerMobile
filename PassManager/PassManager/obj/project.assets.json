@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Dropbox.Api/6.14.0": {
+      "Dropbox.Api/6.15.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
@@ -242,14 +242,14 @@
     }
   },
   "libraries": {
-    "Dropbox.Api/6.14.0": {
-      "sha512": "O/jK5yhv8oMeFaujgiJr3TsSDWCgSUr/IvyDmgIZbaQIkeziavif2b/PLxULhEFRK1F8wssAmohSWI22A8n0gw==",
+    "Dropbox.Api/6.15.0": {
+      "sha512": "vS2MII6LeQTVeHZy5Z0oAZ8LJhVE3qPR/CecQ7qvLNsamhXkIaKE2W0yN4sKsnoVh4Q+dbBxmZWa4GjMBrNjiw==",
       "type": "package",
-      "path": "dropbox.api/6.14.0",
+      "path": "dropbox.api/6.15.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dropbox.api.6.14.0.nupkg.sha512",
+        "dropbox.api.6.15.0.nupkg.sha512",
         "dropbox.api.nuspec",
         "lib/netstandard2.0/Dropbox.Api.dll",
         "lib/netstandard2.0/Dropbox.Api.xml"
@@ -914,7 +914,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Dropbox.Api >= 6.14.0",
+      "Dropbox.Api >= 6.15.0",
       "NETStandard.Library >= 2.0.3",
       "TwoStepsAuthenticator >= 1.4.1",
       "Xamarin.Essentials >= 1.7.0",
@@ -971,7 +971,7 @@
         "dependencies": {
           "Dropbox.Api": {
             "target": "Package",
-            "version": "[6.14.0, )"
+            "version": "[6.15.0, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",

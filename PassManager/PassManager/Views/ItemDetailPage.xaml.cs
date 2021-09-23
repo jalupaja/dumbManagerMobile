@@ -71,17 +71,22 @@ namespace PassManager.Views
             oldUsername = lUsername.Text;
             UsernameEditor.IsVisible = true;
 
+            PassSee.IsVisible = false;
             lPassword.IsVisible = false;
+            lPassword.IsPassword = false;
             oldPassword = lPassword.Text;
+            lPassword.IsPassword = true;
             PasswordEditor.IsVisible = true;
 
             lUrl.IsVisible = false;
             oldUrl = lUrl.Text;
             UrlEditor.IsVisible = true;
 
+            TwoFASee.IsVisible = false;
             lTwoFA.IsVisible = false;
-            oldTwoFA = lTwoFA.Text;
+            oldTwoFA = _viewModel.TwoFA;
             TwoFAEditor.IsVisible = true;
+            Lbl2FA.Text = "2FA Secret:";
 
             lNote.IsVisible = false;
             oldNote = lNote.Text;
@@ -109,6 +114,7 @@ namespace PassManager.Views
             _viewModel.Username = oldUsername;
             UsernameEditor.IsVisible = false;
 
+            PassSee.IsVisible = true;
             lPassword.IsVisible = true;
             _viewModel.Password = oldPassword;
             PasswordEditor.IsVisible = false;
@@ -117,9 +123,12 @@ namespace PassManager.Views
             _viewModel.Url = oldUrl;
             UrlEditor.IsVisible = false;
 
+            TwoFASee.IsVisible = true;
             lTwoFA.IsVisible = true;
             _viewModel.TwoFA = oldTwoFA;
             TwoFAEditor.IsVisible = false;
+            Lbl2FA.Text = "2FA Code:";
+            lTwoFA.Text = Get2FACode();
 
             lNote.IsVisible = true;
             _viewModel.Note = oldNote;
@@ -146,14 +155,18 @@ namespace PassManager.Views
             lUsername.IsVisible = true;
             UsernameEditor.IsVisible = false;
 
+            PassSee.IsVisible = true;
             lPassword.IsVisible = true;
             PasswordEditor.IsVisible = false;
 
             lUrl.IsVisible = true;
             UrlEditor.IsVisible = false;
 
+            TwoFASee.IsVisible = true;
             lTwoFA.IsVisible = true;
             TwoFAEditor.IsVisible = false;
+            Lbl2FA.Text = "2FA Code:";
+            lTwoFA.Text = Get2FACode();
 
             lNote.IsVisible = true;
             NoteEditor.IsVisible = false;
@@ -202,6 +215,22 @@ namespace PassManager.Views
 
             try { ret = new TimeAuthenticator().GetCode(_viewModel.TwoFA); } catch (Exception) { }//https://github.com/glacasa/TwoStepsAuthenticator
             return ret;
+        }
+
+        private void TwoFASee_Clicked(object sender, EventArgs e)
+        {
+            if (lTwoFA.IsPassword)
+                lTwoFA.IsPassword = false;
+            else
+                lTwoFA.IsPassword = true;
+        }
+
+        private void PassSee_Clicked(object sender, EventArgs e)
+        {
+            if (lPassword.IsPassword)
+                lPassword.IsPassword = false;
+            else
+                lPassword.IsPassword = true;
         }
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Aac1OdputyXINsQ6GBIBSWoA/lDz4GFd5ifDqvyrYCYVWN2tkc4LJQ69LsFbZVuAjBMHIykBdgdhZAjb9uz1iw==",
+  "dgSpecHash": "Rc7VcjiDCnQ/q3Dvjl8z1ZXYOQ80ANX/juBQFAhRw8IlCeuFxHjCjbOeO2toJZBiqPpBC6Ngtx9l23en0kifww==",
   "success": true,
   "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\PassManagerEdit\\PassManager\\PassManager.iOS\\PassManager.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jalupa\\.nuget\\packages\\dropbox.api\\6.14.0\\dropbox.api.6.14.0.nupkg.sha512",
+    "C:\\Users\\jalupa\\.nuget\\packages\\dropbox.api\\6.15.0\\dropbox.api.6.15.0.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\sqlite-net-sqlcipher\\1.8.116\\sqlite-net-sqlcipher.1.8.116.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlcipher\\2.0.4\\sqlitepclraw.bundle_e_sqlcipher.2.0.4.nupkg.sha512",

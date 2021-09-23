@@ -27,5 +27,30 @@ namespace PassManager.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
+        UIVisualEffectView _blurWindow = null;
+
+        public override void OnActivated(UIApplication application)
+        {
+            base.OnActivated(application);
+
+            _blurWindow?.RemoveFromSuperview();
+            _blurWindow?.Dispose();
+            _blurWindow = null;
+        }
+
+        public override void OnResignActivation(UIApplication application)
+        {
+            base.OnResignActivation(application);
+
+            using (var blurEffect = UIBlurEffect.FromStyle(UIBlurEffectStyle.Dark))
+            {
+                _blurWindow = new UIVisualEffectView(blurEffect)
+                {
+                    Frame = UIApplication.SharedApplication.KeyWindow.RootViewController.View.Bounds
+                };
+                UIApplication.SharedApplication.KeyWindow.RootViewController.View.AddSubview(_blurWindow);
+            }
+        }
     }
 }

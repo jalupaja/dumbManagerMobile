@@ -439,7 +439,7 @@ namespace PassManager.ViewModels
                     Password = "",
                     Url = "https://www.dropbox.com",
                     TwoFA = "",
-                    Note = tmp
+                    Note = $"|{tmp}|"
                 };
                 Constants.con().Insert(newItem);
 
