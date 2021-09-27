@@ -22,7 +22,17 @@
                     <Editor Text="{Binding Username, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
 
                     <Label Text="Password" TextColor="LightGray" FontSize="Medium" />
-                    <Editor Text="{Binding Password, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
+                    <Editor x:Name="lPassword" Text="{Binding Password, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" />
+                    <Button
+                            x:Name="NewPassword"
+                            Clicked="NewPassword_Clicked"
+                            HeightRequest="38" 
+                            WidthRequest="60" 
+                            HorizontalOptions="End"
+                            Text="{StaticResource IconSync}"
+                            FontFamily="FAS"
+                            FontSize="Medium"
+                            Margin="0,0,0,10"/>
 
                     <Label Text="Url" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Url, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium" Margin="0,0,0,10"/>
@@ -33,7 +43,7 @@
                     <Label Text="Note" TextColor="LightGray" FontSize="Medium" />
                     <Editor Text="{Binding Note, Mode=TwoWay}" TextColor="White" AutoSize="TextChanges" FontSize="Medium"/>
 
-                        <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
                         <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                         <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
                     </StackLayout>

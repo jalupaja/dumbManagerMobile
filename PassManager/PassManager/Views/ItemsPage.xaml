@@ -13,7 +13,7 @@
 
         <StackLayout Orientation="Horizontal">
 
-            <Button Text="{StaticResource IconSync}" FontFamily="FAS" Command="{Binding SyncCommand}" HorizontalOptions="Start" FontSize="Small"  WidthRequest="35"/>
+            <Button Text="{StaticResource IconSettings}" FontFamily="FAS" Command="{Binding SettingsCommand}" HorizontalOptions="Start" FontSize="Small"  WidthRequest="35"/>
             <StackLayout 
                 VerticalOptions="Center"
                 Orientation="Vertical">

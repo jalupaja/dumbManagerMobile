@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using PassManager;
 using PassManager.Models;
 using SQLite;
 
@@ -10,7 +11,7 @@ namespace Password_Manager
 {
     public static class Constants
     {
-
+        public static string retNPass = "";
         public static string basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
         private static SQLiteConnection c = null;
@@ -31,6 +32,55 @@ namespace Password_Manager
         {
             bool works = true;
             SQLiteConnection nc = null;
+
+            //Check for updated file
+            if (File.Exists(Path.Combine(basePath, HashIt(name) + ".db.tmp")))
+            {
+                App.Current.MainPage.DisplayAlert("exists", "", "c");
+                //Delete leftovers from last sync
+                Directory.Delete(Path.Combine(Constants.basePath, "dumbManagerSync"), true);
+
+                bool cont = true;
+                try
+                {
+                    File.Move(Path.Combine(basePath, HashIt(name) + ".db"), Path.Combine(basePath, HashIt(name) + ".db") + ".temp");
+                }
+                catch (Exception)
+                {
+                    cont = false;
+                    //parent.setSyncResponse("ERROR:" + Environment.NewLine + "An updated file has been detected but there has been a problem replacing the old file!");
+                }
+                if (cont)
+                {
+                    try
+                    {
+                        File.Move(Path.Combine(basePath, HashIt(name) + ".db") + ".tmp", Path.Combine(basePath, HashIt(name) + ".db"));
+                    }
+                    catch (Exception)
+                    {
+                        cont = false;
+                        File.Move(Path.Combine(basePath, HashIt(name) + ".db") + ".temp", Path.Combine(basePath, HashIt(name) + ".db"));
+                        //parent.setSyncResponse("ERROR:" + Environment.NewLine + "An updated file has been detected but there has been a problem replacing the old file!");
+                    }
+                }
+                if (cont)
+                {
+                    try
+                    {
+                        File.Delete(Path.Combine(basePath, HashIt(name) + ".db") + ".temp");
+                    }
+                    catch (Exception)
+                    {
+                        cont = false;
+                        //parent.setSyncResponse("ERROR:" + Environment.NewLine + "There has been an error updating your file!");
+                    }
+                }
+                if (cont)
+                {
+                    //parent.setSyncResponse("SUCCESS:" + Environment.NewLine + "Your file has been successfully updated!");
+                }
+            }
+
             try
             {
                 nc = new SQLiteConnection(new SQLiteConnectionString(Path.Combine(basePath, HashIt(name) + ".db"), Flags, true, key: pw));

@@ -29,6 +29,8 @@
             </Style>
 
             <x:String x:Key="IconSync">&#xf021;</x:String>
+            <x:String x:Key="IconSettings">&#xf013;</x:String>
+            <x:String x:Key="IconArrow">&#xf060;</x:String>
             
         </ResourceDictionary>        
     </Application.Resources>

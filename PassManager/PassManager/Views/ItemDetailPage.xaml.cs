@@ -1,4 +1,5 @@
 ﻿using PassManager.ViewModels;
+using Password_Manager;
 using System;
 using TwoStepsAuthenticator;
 using Xamarin.Essentials;
@@ -28,9 +29,17 @@ namespace PassManager.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (_viewModel.Url != null && !Equals("", _viewModel.Url)) LinkFrame.IsVisible = true;
-            else LinkFrame.IsVisible = false;
-            lTwoFA.Text = Get2FACode();
+            if (Constants.retNPass != "" && Constants.retNPass != null)
+            {
+                lPassword.Text = Constants.retNPass;
+                Constants.retNPass = "";
+            }
+            else
+            {
+                if (_viewModel.Url != null && !Equals("", _viewModel.Url)) LinkFrame.IsVisible = true;
+                else LinkFrame.IsVisible = false;
+                lTwoFA.Text = Get2FACode();
+            }
         }
 
         [Obsolete]
@@ -87,6 +96,7 @@ namespace PassManager.Views
             oldTwoFA = _viewModel.TwoFA;
             TwoFAEditor.IsVisible = true;
             Lbl2FA.Text = "2FA Secret:";
+            NewPassword.IsVisible = true;
 
             lNote.IsVisible = false;
             oldNote = lNote.Text;
@@ -118,6 +128,7 @@ namespace PassManager.Views
             lPassword.IsVisible = true;
             _viewModel.Password = oldPassword;
             PasswordEditor.IsVisible = false;
+            NewPassword.IsVisible = false;
 
             lUrl.IsVisible = true;
             _viewModel.Url = oldUrl;
@@ -158,6 +169,7 @@ namespace PassManager.Views
             PassSee.IsVisible = true;
             lPassword.IsVisible = true;
             PasswordEditor.IsVisible = false;
+            NewPassword.IsVisible = false;
 
             lUrl.IsVisible = true;
             UrlEditor.IsVisible = false;
@@ -231,6 +243,16 @@ namespace PassManager.Views
                 lPassword.IsPassword = false;
             else
                 lPassword.IsPassword = true;
+        }
+
+        private async void NewPassword_Clicked(object sender, EventArgs e)
+        {
+            if (!(lPassword.Text == null || lPassword.Text == "" || lPassword.Text == string.Empty))
+            {
+                if (!await App.Current.MainPage.DisplayAlert("overwrite password", "Do you want to overwrite the existing Password?", "Yes", "No"))
+                    return;
+            }
+            await Shell.Current.GoToAsync(nameof(PassGenPage));
         }
     }
 }

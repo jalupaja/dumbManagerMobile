@@ -15,3 +15,43 @@ D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstan
 D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.dll
 D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\ref\PassManager.dll
 D:\Programlar\Visual Studio\Projects\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.deps.json
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Release\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\App.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\AppShell.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemsPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\Views\LoginPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\Views\NewItemPage.xaml.g.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfo.cs
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\XamlC.stamp
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\PassManagerEdit\PassManager\PassManager\obj\Release\netstandard2.0\Views\SettingsPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.deps.json
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\bin\Release\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\bin\Release\netstandard2.0\PassManager.pdb
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.csproj.AssemblyReference.cache
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\App.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\AppShell.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\ItemsPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\LoginPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\NewItemPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\PassGenPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\Views\SettingsPage.xaml.g.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfoInputs.cache
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.AssemblyInfo.cs
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.csproj.CoreCompileInputs.cache
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\XamlC.stamp
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.dll
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\ref\PassManager.dll
+c:\Users\jalupa\source\repos\dumbManagerMobile\PassManager\PassManager\obj\Release\netstandard2.0\PassManager.pdb

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassManager.Views.PassGenPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Password"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label IsTabStop="False" IsEnabled="True" FontSize="Large" Text="\n\n"/>
+            <Label 
+                x:Name="LblPwdCreate"
+                Text="Create a new Password"
+                VerticalOptions="StartAndExpand" 
+                TextColor="White"
+                HorizontalOptions="Center" 
+                IsTabStop="False" 
+                IsEnabled="False" 
+                />
+            <Label IsTabStop="False" IsEnabled="True" FontSize="Large" Text="\n\n\n"/>
+            <Button
+                x:Name="CreatePass"
+                Clicked="CreatePass_Clicked"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Text="new Password"
+                TextColor="White"
+                BackgroundColor="Gray"
+                />
+            <Label IsTabStop="False" IsEnabled="True" FontSize="Large" Text="\n\n\n"/>
+            <Entry 
+                x:Name="PassLength"
+                Keyboard="Telephone" 
+                IsSpellCheckEnabled="False" 
+                Text="20"
+                HorizontalOptions="StartAndExpand"
+                TextColor="White"
+                BackgroundColor="Gray"
+                TextChanged="CreatePass_Clicked"
+                />
+
+            <Grid>
+                <CheckBox x:Name="Lowercase" IsChecked="True" CheckedChanged="CreatePass_Clicked"/>
+                <Label Grid.Column="1" Text="use lowercase" HorizontalOptions="Start" TextColor="White" HorizontalTextAlignment="End"/>
+            </Grid>
+            <Grid>
+                <CheckBox x:Name="Uppercase" IsChecked="True" CheckedChanged="CreatePass_Clicked"/>
+                <Label Grid.Column="1" Text="use uppercase" HorizontalOptions="Start" TextColor="White" HorizontalTextAlignment="End"/>
+            </Grid>
+            <Grid>
+                <CheckBox x:Name="Numbers" IsChecked="True" CheckedChanged="CreatePass_Clicked"/>
+                <Label Grid.Column="1" Text="use numbers" HorizontalOptions="Start" TextColor="White" HorizontalTextAlignment="End"/>
+            </Grid>
+            <Grid>
+                <CheckBox x:Name="SpecChar" IsChecked="True" CheckedChanged="CreatePass_Clicked"/>
+                <Label Grid.Column="1" Text="use special characters" HorizontalOptions="Start" TextColor="White" HorizontalTextAlignment="End"/>
+            </Grid>
+            <Grid>
+                <Entry 
+                x:Name="PasswordOut"
+                TextColor="White"
+                BackgroundColor="Gray" 
+                VerticalOptions="Start"
+                IsReadOnly="True"
+                Grid.Column="0"
+                />
+                <Button
+                x:Name="CopyPass"
+                Clicked="CopyPass_Clicked"
+                Text="Copy"
+                TextColor="White"
+                BackgroundColor="DarkGray"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="End"
+                Grid.Column="0"
+                />
+            </Grid>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Save" Clicked="Save_Clicked" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+
+            <Label IsTabStop="False" FontSize="Large" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

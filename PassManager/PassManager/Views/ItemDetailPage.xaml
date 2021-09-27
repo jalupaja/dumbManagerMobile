@@ -99,6 +99,17 @@
                             HorizontalOptions="End"
                             Text="Copy"
                             FontSize="8"/>
+
+                            <Button
+                            x:Name="NewPassword"
+                            IsVisible="False"
+                            Clicked="NewPassword_Clicked"
+                            HeightRequest="38" 
+                            WidthRequest="60" 
+                            HorizontalOptions="End"
+                            Text="{StaticResource IconSync}"
+                            FontFamily="FAS"
+                            FontSize="Medium"/>
                         </Grid>
                     </StackLayout>
 

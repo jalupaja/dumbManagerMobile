@@ -102,7 +102,12 @@
     <TabBar>
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </TabBar>
-
+    <TabBar>
+        <ShellContent Route="SettingsPage" ContentTemplate="{DataTemplate local:SettingsPage}"/>
+    </TabBar>
+    <TabBar>
+        <ShellContent Route="PassGenPage" ContentTemplate="{DataTemplate local:PassGenPage}" />
+    </TabBar>
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 

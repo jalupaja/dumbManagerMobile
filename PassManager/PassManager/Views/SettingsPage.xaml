@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PassManager.Views.SettingsPage"
+             Shell.PresentationMode="ModalAnimated"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="Black">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="{StaticResource IconArrow}" FontFamily="FAS" Clicked="Back_Clicked" HorizontalOptions="Start" WidthRequest="50"/>
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        
+        <StackLayout >
+
+            <Grid HorizontalOptions="StartAndExpand">
+                <Button Text="Import" Clicked="Import_Clicked" Grid.Column="0" Grid.Row="1" HorizontalOptions="StartAndExpand" TextColor="White" VerticalOptions="Center"/>
+                <Button Text="Export" Clicked="Export_Clicked" Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand" TextColor="White" VerticalOptions="Center"/>
+
+                <Button Text="Sync" Clicked="Sync_Clicked" Grid.Column="0" Grid.Row="3" HorizontalOptions="Start" TextColor="White" VerticalOptions="Center"/>
+            </Grid>
+            
+            <Label x:Name="TxtSyncRes" Text="       " TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>
